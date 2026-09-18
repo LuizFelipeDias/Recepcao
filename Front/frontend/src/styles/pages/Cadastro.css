@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.cadastro-container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cadastro-container {
+    height: 100vh; /* Altura exata da janela */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f8ff;
+    overflow: hidden; /* Remove as barras de rolagem */
+}
+
+/* Painel Esquerdo (Formulário) */
+.form-panel {
+    flex: 1;
+    background-color: #f5f8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.form-content {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.form-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.1;
+    color: #09090b;
+}
+
+.form-header p {
+    font-family: 'Montserrat', sans-serif;
+    color: #71717a;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos dos Inputs */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(128, 152, 249, 0.1);
+    border: 2px solid rgba(128, 152, 249, 0.5);
+    border-radius: 8px;
+    padding: 0 1rem;
+    height: 2.75rem; /* Altura reduzida para caber na tela */
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.input-group:focus-within {
+    border-color: #8098f9;
+}
+
+.input-icon {
+    flex-shrink: 0;
+    color: rgba(45, 49, 166, 0.4);
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+.input-field {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #09090b;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.input-field::placeholder {
+    color: rgba(45, 49, 166, 0.4);
+}
+
+/* Area de Texto (Observação) */
+.textarea-group {
+    height: auto;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+}
+
+.textarea-icon {
+    margin-top: 0.125rem;
+}
+
+.textarea-field {
+    resize: none;
+    height: 55px; /* Tamanho ajustado para não quebrar a página */
+}
+
+/* Botão Enviar */
+.submit-btn {
+    background-color: #8098f9;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    height: 3.25rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit-btn:hover {
+    background-color: #6172f3;
+}
+
+/* ─── Painel Direito ─── */
+.info-panel {
+    display: none;
+}
+
+/* Responsividade Desktop */
+@media (min-width: 1024px) {
+    .cadastro-container {
+        flex-direction: row;
+    }
+
+    .form-panel {
+        padding: 1.5rem;
+        flex: 1;
+    }
+
+    .info-panel {
+        display: flex;
+        flex: 1;
+        background-color: #ffffff; /* Fundo branco limpo para a logo */
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.03); /* Sombra suave para separar */
+    }
+
+    .right-panel-image {
+        max-width: 65%; /* Controla o tamanho máximo da logo */
+        max-height: 70%;
+        object-fit: contain; /* Garante que a imagem não distorça */
+    }
+
+    .link-ver-cadastrados {
+        display: inline-block;
+        margin-top: 15px;
+        color: #666; /* Cor padrão discreta */
+        text-decoration: none;
+        font-size: 14px;
+        text-align: center;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .link-ver-cadastrados:hover {
+        color: #0056b3; /* Cor ao passar o mouse */
+        text-decoration: underline; /* Cria o efeito de sublinhar as letras */
+    }
+}

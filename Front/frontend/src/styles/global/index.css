@@ -1,0 +1,28 @@
+/* Importando a fonte Inter do Google Fonts (a mesma que você usou no botão) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset de margens e configuração global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9; /* Uma cor de fundo levemente cinza para não doer a vista */
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Deixa links com aparência limpa */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove a borda azul de seleção ao clicar em inputs/botões */
+input:focus, button:focus {
+    outline: none;
+}

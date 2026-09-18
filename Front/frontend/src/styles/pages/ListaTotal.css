@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Container Principal */
+.lista-container {
+    background: #ffffff; /* Fundo totalmente branco */
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+}
+
+.lista-content {
+    padding: 40px 57px 60px;
+}
+
+/* Tabela */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 0; /* Linhas retas, sem arredondamento */
+}
+
+.table-inner {
+    min-width: 1140px;
+    border: 1px solid #000000; /* Borda externa sólida e preta */
+    background: #ffffff;
+    border-radius: 0; /* Reto */
+}
+
+.table-section-label {
+    background: #f0f0f0; /* Fundo cinza claro */
+    border-bottom: 1px solid #000000; /* Linha de divisão preta */
+    padding: 12px 16px;
+}
+
+.table-section-label span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.table-count {
+    font-weight: 400;
+    color: #666666;
+    margin-left: 8px;
+}
+
+.table-row {
+    display: grid;
+}
+
+.table-header-row {
+    border-bottom: 1px solid #000000; /* Linha reta e preta */
+    background: #fafafa;
+}
+
+.table-header-cell {
+    padding: 10px 12px;
+}
+
+.table-header-cell span {
+    font-size: 13px;
+    color: #000000; /* Fonte preta */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table-body-row {
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+.table-body-row:last-child {
+    border-bottom: none;
+}
+
+.table-body-row:hover {
+    background: #f5f5f5; /* Efeito de foco sutil em cinza */
+}
+
+.table-cell {
+    padding: 14px 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.table-cell span {
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.action-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn {
+    background: #ffffff;
+    border: 1px solid #000000; /* Botão reto e delineado */
+    cursor: pointer;
+    border-radius: 0; /* Formato quadrado/reto */
+    padding: 6px 8px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background: #000000; /* Fica preto ao passar o mouse */
+}
+
+/* Força a cor do SVG (Lixeira) pelo CSS, independente do que está no React */
+.delete-btn svg path {
+    fill: #000000 !important; /* Ícone preto */
+    transition: fill 0.2s;
+}
+
+.delete-btn:hover svg path {
+    fill: #ffffff !important; /* Ícone branco ao focar */
+}
+
+/* Mensagens de Status (Loading/Error) */
+.status-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.status-message span {
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    color: #000000;
+}
+
+.status-message.error span {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Paginação */
+.pagination-wrapper {
+    margin-top: 16px;
+    min-width: 1140px;
+}
+
+.pagination-line {
+    height: 1px;
+    background: #000000; /* Linha separadora reta e preta */
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.page-btn-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.page-btn-nav:hover:not(:disabled) {
+    color: #666666;
+}
+
+.page-btn-nav.prev { margin-right: 16px; }
+.page-btn-nav.next { margin-left: 16px; }
+
+.page-btn-nav:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.page-number {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 0; /* Botões quadrados */
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.page-number:hover {
+    background: #f0f0f0;
+}
+
+.page-number.active {
+    font-weight: 600;
+    color: #ffffff;
+    background: #000000; /* Preto sólido em vez de azul */
+}
+
+.page-dots {
+    color: #000000;
+    font-size: 14px;
+    padding: 0 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pagination-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    border-radius: 0; /* Indicador inferior reto */
+    background: #000000; /* Preto sólido */
+}
+
+/* Rodapé */
+.footer {
+    margin-top: 24px;
+    display: flex;
+    gap: 80px;
+}
+
+.footer span {
+    color: #999999; /* Cinza médio */
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
