@@ -1,0 +1,13 @@
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Dependências e builds (reforço dos .gitignore de cada app)
+node_modules/
+vendor/
+.env
