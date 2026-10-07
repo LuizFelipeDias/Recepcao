@@ -67,6 +67,9 @@ return [
 
     'timezone' => 'UTC',
 
+    // Fuso usado para definir "o culto de hoje" no check-in.
+    'culto_timezone' => env('CULTO_TIMEZONE', 'America/Sao_Paulo'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration

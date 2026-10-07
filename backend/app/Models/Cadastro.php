@@ -4,6 +4,7 @@ namespace App\Models;
 
 //use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cadastro extends Model
 {
@@ -41,5 +42,10 @@ class Cadastro extends Model
         return [
             'created_at'  => 'datetime'
         ];
+    }
+
+    public function presencas(): HasMany
+    {
+        return $this->hasMany(Presenca::class, 'recepcao_id');
     }
 }
