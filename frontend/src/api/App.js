@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 /* Páginas */
 import Cadastro from "../pages/Cadastro";
 import ListaTotal from "../pages/ListaTotal";
+import CheckinRapido from "../pages/CheckinRapido";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route element={<RotaProtegida/>}>
                     <Route path='/cadastro' element={<Cadastro />} />
                     <Route path='/lista' element={<ListaTotal />} />
+                    <Route path='/checkin' element={<CheckinRapido />} />
                 </Route>
 
             </Routes>
